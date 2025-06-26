@@ -8,7 +8,7 @@ Binary search is an efficient algorithm for finding an item from a sorted list o
 
 -----
 
-### Kth Smallest Product of Two Sorted Arrays
+### 📌 Kth Smallest Product of Two Sorted Arrays
 
 **Tag:** Binary Search
 
@@ -16,7 +16,7 @@ Binary search is an efficient algorithm for finding an item from a sorted list o
 
 -----
 
-### 1\. Check If a Number Exists in a Sorted Array
+### 📌 1\. Check If a Number Exists in a Sorted Array
 
 **❓ Problem:** Given a sorted array `arr` and a `target` value, return `True` if `target` exists in the array, otherwise `False`.
 
@@ -38,7 +38,7 @@ def binary_search(arr, target):
 
 -----
 
-### 2\. Find First Occurrence of a Number in a Sorted Array
+### 📌 2\. Find First Occurrence of a Number in a Sorted Array
 
 **❓ Problem:** Given a sorted array `arr` (with possible duplicates) and a `target` value, return the index of the **first occurrence** of `target`. If not found, return `-1`.
 
@@ -62,7 +62,7 @@ def first_occurrence(arr, target):
 
 -----
 
-### 3\. Find Last Occurrence of a Number in a Sorted Array
+### 📌 3\. Find Last Occurrence of a Number in a Sorted Array
 
 **❓ Problem:** Given a sorted array `arr` (with possible duplicates) and a `target` value, return the index of the **last occurrence** of `target`. If not found, return `-1`.
 
@@ -86,7 +86,7 @@ def last_occurrence(arr, target):
 
 -----
 
-### 4\. Find Index of First Element Greater Than a Given Number
+### 📌 4\. Find Index of First Element Greater Than a Given Number
 
 **❓ Problem:** Given a sorted array `arr` and a number `num`, return the index of the **first element strictly greater** than `num`. If no such element exists, return `-1`.
 
@@ -108,7 +108,7 @@ def index_of_first_greater(arr, num):
 
 -----
 
-### 5\. Find Index of Last Element Less Than a Given Number
+### 📌 5\. Find Index of Last Element Less Than a Given Number
 
 **❓ Problem:** Given a sorted array `arr` and a number `num`, return the index of the **last element strictly less** than `num`. If no such element exists, return `-1`.
 
@@ -130,7 +130,7 @@ def index_of_last_less(arr, num):
 
 -----
 
-### 6\. Count Elements Less Than a Given Number
+### 📌 6\. Count Elements Less Than a Given Number
 
 **❓ Problem:** Given a sorted array `arr` and a number `num`, return the **number of elements strictly less than** `num`.
 
@@ -152,7 +152,7 @@ def count_elements_less_than(arr, num):
 
 -----
 
-### 7\. Count Elements Greater Than a Given Number
+### 📌 7\. Count Elements Greater Than a Given Number
 
 **❓ Problem:** Given a sorted array `arr` and a number `num`, return the **number of elements strictly greater than** `num`.
 
@@ -174,7 +174,7 @@ def count_elements_greater_than(arr, num):
 
 -----
 
-### 8\. Count Elements Less Than or Equal to a Given Number
+### 📌 8\. Count Elements Less Than or Equal to a Given Number
 
 **❓ Problem:** Given a sorted array `arr` and a number `num`, return the **number of elements less than or equal to** `num`.
 
@@ -196,7 +196,7 @@ def count_elements_less_equal(arr, num):
 
 -----
 
-### 9\. Count Elements Greater Than or Equal to a Given Number
+### 📌 9\. Count Elements Greater Than or Equal to a Given Number
 
 **❓ Problem:** Given a sorted array `arr` and a number `num`, return the **number of elements greater than or equal to** `num`.
 
@@ -218,7 +218,7 @@ def count_elements_greater_equal(arr, num):
 
 -----
 
-### 10\. Count of Products $\\le v$ When Multiplied by $x$ (for any $x$)
+### 📌 10\. Count of Products $\\le v$ When Multiplied by $x$ (for any $x$)
 
 **❓ Problem:** Given a sorted array `nums2`, an integer `x`, and an integer `v`, count how many elements in `nums2` satisfy the condition: $x \\times \\text{nums2}[j] \\le v$. This function handles positive, negative, and zero values for `x`.
 
@@ -261,7 +261,7 @@ def count_products_leq_v(nums2, x, v):
 
 -----
 
-### 11\. Count of Products $\< v$ When Multiplied by $x$ (for any $x$)
+### 📌 11\. Count of Products $\< v$ When Multiplied by $x$ (for any $x$)
 
 **❓ Problem:** Given a sorted array `nums2`, an integer `x`, and an integer `v`, count how many elements in `nums2` satisfy the condition: $x \\times \\text{nums2}[j] \< v$. This function handles positive, negative, and zero values for `x`.
 
@@ -304,7 +304,7 @@ def count_products_lt_v(nums2, x, v):
 
 -----
 
-### 12\. Count of Products $\> v$ When Multiplied by $x$ (for any $x$)
+### 📌 12\. Count of Products $\> v$ When Multiplied by $x$ (for any $x$)
 
 **❓ Problem:** Given a sorted array `nums2`, an integer `x`, and an integer `v`, count how many elements in `nums2` satisfy the condition: $x \\times \\text{nums2}[j] \> v$. This function handles positive, negative, and zero values for `x`.
 
@@ -347,7 +347,7 @@ def count_products_gt_v(nums2, x, v):
 
 -----
 
-### 13\. Count of Products $\\ge v$ When Multiplied by $x$ (for any $x$)
+### 📌 13\. Count of Products $\\ge v$ When Multiplied by $x$ (for any $x$)
 
 **❓ Problem:** Given a sorted array `nums2`, an integer `x`, and an integer `v`, count how many elements in `nums2` satisfy the condition: $x \\times \\text{nums2}[j] \\ge v$. This function handles positive, negative, and zero values for `x`.
 
@@ -386,4 +386,60 @@ def count_products_ge_v(nums2, x, v):
             else:
                 right = mid - 1
         return ans_idx + 1
+```
+
+---
+
+### 📌 14. Count Elements satisfying `nums2[j] / x >= v` (Unified for Any $x \\ne 0$)
+
+**❓ Problem:**
+Given a sorted array `nums2`, an integer `x` (**guaranteed non-zero**), and an integer `v`, count how many elements in `nums2` satisfy the condition: $\\text{nums2}[j] / x \\ge v$.
+
+
+```python
+def count_div_ge_v(nums2, x, v):
+    n = len(nums2)
+
+    # Pre-calculate the threshold value for comparison
+    # This value is effectively 'v * x' but the inequality direction depends on x's sign.
+    # Since Python handles large integers, direct multiplication is fine.
+    # For other languages (C++/Java), one might need 'long long' for product to avoid overflow.
+    threshold = v * x
+
+    if x > 0:
+        # Condition: nums2[j] / x >= v  =>  nums2[j] >= v * x
+        # We need to count elements nums2[j] that are >= threshold.
+        # This is equivalent to finding the first index where element is >= threshold,
+        # then counting all elements from that index to the end.
+        
+        left, right = 0, n - 1
+        first_ge_idx = n # Default: assume no element satisfies (all are < threshold)
+
+        while left <= right:
+            mid = (left + right) // 2
+            if nums2[mid] >= threshold:
+                first_ge_idx = mid
+                right = mid - 1 # Try to find an earlier index
+            else:
+                left = mid + 1
+        return n - first_ge_idx
+
+    else:  # x < 0
+        # Condition: nums2[j] / x >= v  =>  nums2[j] <= v * x (inequality flips)
+        # We need to count elements nums2[j] that are <= threshold.
+        # This is equivalent to finding the last index where element is <= threshold,
+        # then counting all elements from start to that index.
+
+        left, right = 0, n - 1
+        last_leq_idx = -1 # Default: assume no element satisfies (all are > threshold)
+
+        while left <= right:
+            mid = (left + right) // 2
+            if nums2[mid] <= threshold:
+                last_leq_idx = mid
+                left = mid + 1 # Try to find a later index
+            else:
+                right = mid - 1
+        return last_leq_idx + 1
+
 ```
